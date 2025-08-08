@@ -1,61 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desvendando João 3:16</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ffe5b4, #ffd8a9, #ffe5b4);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: #4a3c1a;
-            min-height: 100vh;
-            padding: 20px;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        h1, h2, p {
-            margin: 0 auto 20px;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .author-info {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        .book-description {
-            font-weight: bold;
-            color: #b35900;
-            margin-top: 20px;
-            line-height: 1.5;
-        }
-
-        .questionario-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background-color: #ff9800;
-            color: white;
-            font-weight: bold;
-            font-size: 1em;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .questionario-btn:hover {
-            background-color: #e68900;
-        }
-
-     <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>O Sacrifício que Mudou o Mundo | Kathleen Lima</title>
@@ -71,10 +16,12 @@
             background: linear-gradient(135deg, #ffe5b4, #ffd8a9, #ffe5b4);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
-            color: #4a3c1a; /* texto marrom escuro para contraste */
+            color: #4a3c1a;
             min-height: 100vh;
             padding: 20px;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
@@ -85,6 +32,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            flex: 1;
         }
         header {
             text-align: center;
@@ -95,14 +43,25 @@
         .logo {
             font-size: 2.8rem;
             margin-bottom: 10px;
-            color: #b36e00; /* dourado escuro */
+            color: #b36e00;
             text-shadow: 0 0 10px rgba(179, 110, 0, 0.5);
         }
+        .header-title {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: #b36e00;
+            text-shadow: 0 0 10px rgba(179, 110, 0, 0.3);
+            text-align: center;
+        }
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             opacity: 0.9;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            text-align: center;
+            color: #5a4a20;
+            font-weight: 500;
+            line-height: 1.5;
         }
         .content {
             display: flex;
@@ -147,50 +106,75 @@
             color: #4a3c1a;
         }
         .book-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
             color: #b36e00;
             text-shadow: 0 0 10px rgba(179, 110, 0, 0.3);
+            text-align: center;
+            line-height: 1.2;
         }
         .book-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             margin-bottom: 25px;
             color: #5a4a20;
             font-weight: 500;
+            text-align: center;
+            line-height: 1.4;
         }
         .book-author {
             margin-bottom: 25px;
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(75, 60, 26, 0.3);
+            text-align: center;
         }
         .author-name {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: bold;
             margin-bottom: 5px;
             color: #b36e00;
         }
         .author-title {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.8;
             font-style: italic;
             color: #6a551b;
         }
         .book-description {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             line-height: 1.7;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .emphasis {
+            font-weight: bold;
+            color: #b36e00;
+            margin: 20px 0;
+            line-height: 1.7;
+        }
+        .verse {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 3px solid #b36e00;
+            background: rgba(255, 229, 180, 0.4);
+            color: #4a3c1a;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.7;
         }
         .action-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 30px;
+            justify-content: center;
         }
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 30px;
+            padding: 15px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -199,7 +183,9 @@
             cursor: pointer;
             font-size: 1.1rem;
             text-align: center;
-            min-width: 200px;
+            flex: 1;
+            min-width: 150px;
+            max-width: 100%;
         }
         .btn-download {
             background: linear-gradient(45deg, #ffb347, #ffd580);
@@ -261,17 +247,21 @@
             color: #b36e00;
         }
         .feature-title {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 10px;
             color: #b36e00;
+        }
+        .feature p {
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         footer {
             text-align: center;
             padding: 30px 0;
             margin-top: 30px;
             border-top: 1px solid rgba(75, 60, 26, 0.3);
-            font-size: 0.9rem;
-            opacity: 0.8;
+            font-size: 1rem;
+            opacity: 0.9;
             color: #4a3c1a;
         }
         .social-links {
@@ -298,32 +288,96 @@
             color: #fff;
             transform: translateY(-5px);
         }
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-                align-items: center;
-            }
-            .book-cover, .book-details {
-                max-width: 100%;
-            }
-            .action-buttons {
-                flex-direction: column;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
         .highlight {
             color: #b36e00;
             font-weight: bold;
         }
-        .verse {
-            font-style: italic;
-            margin: 20px 0;
-            padding: 15px;
-            border-left: 3px solid #b36e00;
-            background: rgba(255, 229, 180, 0.4);
-            color: #4a3c1a;
+
+        /* Media Queries para responsividade */
+        @media (max-width: 992px) {
+            .header-title {
+                font-size: 3rem;
+            }
+            .tagline {
+                font-size: 1.6rem;
+            }
+            .book-title {
+                font-size: 2.4rem;
+            }
+            .book-subtitle {
+                font-size: 1.5rem;
+            }
+            .verse {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2.5rem;
+            }
+            .tagline {
+                font-size: 1.4rem;
+            }
+            .book-title {
+                font-size: 2rem;
+            }
+            .book-subtitle {
+                font-size: 1.3rem;
+            }
+            .book-description {
+                font-size: 1.1rem;
+            }
+            .action-buttons {
+                flex-direction: column;
+            }
+            .cover-container {
+                height: 450px;
+            }
+            .verse {
+                font-size: 1.2rem;
+            }
+            .feature {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 1.2rem;
+            }
+            .book-title {
+                font-size: 1.8rem;
+            }
+            .book-subtitle {
+                font-size: 1.1rem;
+            }
+            .book-description {
+                font-size: 1rem;
+            }
+            .cover-container {
+                height: 380px;
+            }
+            .book-details {
+                padding: 20px;
+            }
+            .verse {
+                font-size: 1.1rem;
+                padding: 10px;
+            }
+            .feature-title {
+                font-size: 1.3rem;
+            }
+            .feature p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -331,13 +385,13 @@
     <div class="container">
         <header>
             <div class="logo"><i class="fas fa-book-open"></i></div>
-            <h1>Livro Inspirador</h1>
+            <h1 class="header-title">Livro Inspirador</h1>
             <p class="tagline">Uma jornada através do amor divino e do sacrifício que transformou a humanidade</p>
         </header>
         <div class="content">
             <div class="book-cover">
                 <div class="cover-container">
-                    <img src="capa.png" alt="Capa do Livro - O Sacrifício que Mudou o Mundo" class="cover-img" />
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Capa do Livro - O Sacrifício que Mudou o Mundo" class="cover-img" />
                 </div>
             </div>
             <div class="book-details">
@@ -347,19 +401,35 @@
                     <div class="author-name">Kathleen Lima</div>
                     <div class="author-title">Escritora Cristã</div>
                 </div>
-                <p class="book-description" style="text-align: justify;">
-                    "Desde a fundação do mundo, a salvação tem um nome: Jesus". Neste livro profundamente inspirador, Kathleen Lima nos guia em uma jornada reveladora através das Escrituras, desvendando o imenso amor de Deus expresso em João 3:16.
+                
+                <p class="book-description">
+                    "Desde a fundação do mundo, a salvação tem um nome: Jesus".
                 </p>
-                <p class="book-description" style="text-align: justify;">
-                    Através de uma análise cuidadosa das histórias bíblicas, desde a criação até a vida de José, a autora mostra como cada narrativa aponta para o sacrifício redentor de Cristo. Uma obra que conecta o leitor à Palavra de Deus e revela o amor que percorre toda a Bíblia e a história da humanidade.
+                <p class="book-description">
+                    Neste livro profundamente inspirador, Kathleen Lima nos guia em uma jornada reveladora através das Escrituras, desvendando o imenso amor de Deus expresso em João 3:16.
                 </p>
-                <p class="book-description" style="font-weight: bold; color: #b36e00; margin-top: 20px; text-align: justify;">
-                    O amor de Deus transcende tempo, espaço e matéria. Apesar dos milhares de anos de existência do universo, Ele continua amando. Seu amor sustenta toda a criação e enche a terra com Sua glória, estando presente em todos os lugares. Mesmo que toda matéria que conhecemos um dia desapareça, para aqueles que creem, Seu amor criou um novo lugar, onde não haverá dor, choro, tristeza ou destruição, mas somente vida.
+                <p class="book-description">
+                    Através de uma análise cuidadosa das histórias bíblicas, desde a criação até a vida de José, a autora mostra como cada narrativa aponta para o sacrifício redentor de Cristo.
                 </p>
+                <p class="book-description">
+                    Uma obra que conecta o leitor à Palavra de Deus e revela o amor que percorre toda a Bíblia e a história da humanidade.
+                </p>
+                
+                <p class="book-description emphasis">
+                    O amor de Deus transcende tempo, espaço e matéria. Apesar dos milhares de anos de existência do universo, Ele continua amando.
+                </p>
+                <p class="book-description emphasis">
+                    Seu amor sustenta toda a criação e enche a terra com Sua glória, estando presente em todos os lugares.
+                </p>
+                <p class="book-description emphasis">
+                    Mesmo que toda matéria que conhecemos um dia desapareça, para aqueles que creem, Seu amor criou um novo lugar, onde não haverá dor, choro, tristeza ou destruição, mas somente vida.
+                </p>
+                
                 <div class="verse">
                     "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."<br />
                     <span class="highlight">João 3:16</span>
                 </div>
+                
                 <div class="action-buttons">
                     <a href="O_Sacrificio_que_Mudou_o_Mundo.pdf" class="btn btn-download" download>
                         <i class="fas fa-download"></i> Baixar Livro Gratuito
@@ -397,7 +467,7 @@
                 <a href="https://www.instagram.com/_kathleenlima_alves?igsh=MTI3Y3o1b2kzZjE3eQ==" target="_blank" class="social-link">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="mailto:kathleenlima1009@gmail.com" class="social-link">
+                <a href="mailto:kathleenlima1997@gmail.com" class="social-link">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://wa.me/5512966662233" class="social-link">
