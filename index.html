@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvendando João 3:16</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe5b4, #ffd8a9, #ffe5b4);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #4a3c1a;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1, h2, p {
+            margin: 0 auto 20px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .author-info {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .book-description {
+            font-weight: bold;
+            color: #b35900;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .questionario-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #ff9800;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .questionario-btn:hover {
+            background-color: #e68900;
+        }
+
+     <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>O Sacrifício que Mudou o Mundo | Kathleen Lima</title>
@@ -48,7 +103,6 @@
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
-            text-align: center;
         }
         .content {
             display: flex;
@@ -91,27 +145,23 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(179, 110, 0, 0.2);
             color: #4a3c1a;
-            text-align: left;
         }
         .book-title {
             font-size: 2.5rem;
             margin-bottom: 15px;
             color: #b36e00;
             text-shadow: 0 0 10px rgba(179, 110, 0, 0.3);
-            text-align: left;
         }
         .book-subtitle {
             font-size: 1.3rem;
             margin-bottom: 25px;
             color: #5a4a20;
             font-weight: 500;
-            text-align: left;
         }
         .book-author {
             margin-bottom: 25px;
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(75, 60, 26, 0.3);
-            text-align: left;
         }
         .author-name {
             font-size: 1.4rem;
@@ -129,7 +179,6 @@
             margin-bottom: 30px;
             line-height: 1.7;
             font-size: 1.1rem;
-            text-align: left;
         }
         .action-buttons {
             display: flex;
@@ -197,7 +246,7 @@
             background: rgba(255, 255, 255, 0.7);
             padding: 25px;
             border-radius: 10px;
-            text-align: left;
+            text-align: center;
             transition: transform 0.3s ease;
             border: 1px solid rgba(179, 110, 0, 0.2);
             color: #4a3c1a;
@@ -249,6 +298,21 @@
             color: #fff;
             transform: translateY(-5px);
         }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .book-cover, .book-details {
+                max-width: 100%;
+            }
+            .action-buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
         .highlight {
             color: #b36e00;
             font-weight: bold;
@@ -260,7 +324,6 @@
             border-left: 3px solid #b36e00;
             background: rgba(255, 229, 180, 0.4);
             color: #4a3c1a;
-            text-align: left;
         }
     </style>
 </head>
@@ -284,13 +347,13 @@
                     <div class="author-name">Kathleen Lima</div>
                     <div class="author-title">Escritora Cristã</div>
                 </div>
-                <p class="book-description">
+                <p class="book-description" style="text-align: justify;">
                     "Desde a fundação do mundo, a salvação tem um nome: Jesus". Neste livro profundamente inspirador, Kathleen Lima nos guia em uma jornada reveladora através das Escrituras, desvendando o imenso amor de Deus expresso em João 3:16.
                 </p>
-                <p class="book-description">
+                <p class="book-description" style="text-align: justify;">
                     Através de uma análise cuidadosa das histórias bíblicas, desde a criação até a vida de José, a autora mostra como cada narrativa aponta para o sacrifício redentor de Cristo. Uma obra que conecta o leitor à Palavra de Deus e revela o amor que percorre toda a Bíblia e a história da humanidade.
                 </p>
-                <p class="book-description" style="font-weight: bold; color: #b36e00; margin-top: 20px;">
+                <p class="book-description" style="font-weight: bold; color: #b36e00; margin-top: 20px; text-align: justify;">
                     O amor de Deus transcende tempo, espaço e matéria. Apesar dos milhares de anos de existência do universo, Ele continua amando. Seu amor sustenta toda a criação e enche a terra com Sua glória, estando presente em todos os lugares. Mesmo que toda matéria que conhecemos um dia desapareça, para aqueles que creem, Seu amor criou um novo lugar, onde não haverá dor, choro, tristeza ou destruição, mas somente vida.
                 </p>
                 <div class="verse">
@@ -349,7 +412,7 @@
             window.addEventListener('mousemove', (e) => {
                 const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
                 const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-                coverContainer.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+                coverContainer.style.transform = rotateY(${xAxis}deg) rotateX(${yAxis}deg);
             });
             const downloadBtn = document.querySelector('.btn-download');
             downloadBtn.addEventListener('click', function () {
